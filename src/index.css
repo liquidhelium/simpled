@@ -1,0 +1,22 @@
+#draw_area {
+    width: 700px;
+    aspect-ratio: 16/9;
+    padding: 50;
+    border: 3px solid black;
+}
+
+.center {
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    float: left;
+}
+
+.center * {
+    position: relative;
+    left: -50%;
+}
+
+html {
+    width: auto;
+}

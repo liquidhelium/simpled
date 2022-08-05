@@ -12,9 +12,7 @@ enum EaseType {
 
 function interplot(time1: Float, time2: Float, y1: Float, y2: Float, time: Float, e_type: EaseType): Float{
     var ret:Float;
-    console.log(e_type)
     ret = ease(time1,time2,y1,y2,time,tween[e_type])
-    console.log(ret)
     
     return ret
 }

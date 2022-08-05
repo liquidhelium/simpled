@@ -11,13 +11,13 @@ export function draw_chart(
     // ctx.scale(devicePixelRatio,devicePixelRatio)
     clearCanvas(canvas)
     ctx.lineWidth = 5;
+    ctx.lineCap = "round";
     for (let line of chart.connections) {
         var x1 = event_array_get_at(chart.dots[line.from].x_position, time) * canvas.width;
         var x2 = event_array_get_at(chart.dots[line.to].x_position, time) * canvas.width;
         var y1 = event_array_get_at(chart.dots[line.from].y_position, time) * canvas.height;
         var y2 = event_array_get_at(chart.dots[line.to].y_position, time) * canvas.height;
         var alpha = event_array_get_at(line.alpha,time);
-        console.log(alpha)
         ctx.strokeStyle = "rgba(10,10,10," +(alpha/255).toString()+ ")"
         ctx.beginPath();
         ctx.moveTo(x1,y1);
