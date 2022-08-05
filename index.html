@@ -8,12 +8,23 @@
 </head>
 
 <body>
-
-    <dev class="center">
-        <canvas id="draw_area">
-      你的浏览器不支持Canvas.
-    </canvas>
-        <input type="button" value="点击全屏" id="full_screen">
+    <dev class="verctical">
+        <dev class="center">
+            <dev class="container verctical">
+                <canvas id="draw_area">
+                  你的浏览器不支持Canvas.
+                </canvas>
+                <dev class="center">
+                    <dev class="container horizonal">
+                        <button type="button" id="pause">暂停</button>
+                    </dev>
+                </dev>
+                <dev class="horizonal">
+                    <input type="button" value="点击全屏" id="full_screen" onclick="canvas_full_screen">
+                    <input type="file" value="上传谱面" id="upload_file">
+                </dev>
+            </dev>
+        </dev>
     </dev>
 </body>
 
