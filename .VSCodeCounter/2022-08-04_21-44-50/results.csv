@@ -1,0 +1,23 @@
+"filename", "language", "JSON", "TypeScript", "JavaScript", "JSON with Comments", "HTML", "comment", "blank", "total"
+"/home/helium/coding/simpled/display/display.js", "JavaScript", 0, 0, 31, 0, 0, 1, 1, 33
+"/home/helium/coding/simpled/display/display.ts", "TypeScript", 0, 32, 0, 0, 0, 1, 5, 38
+"/home/helium/coding/simpled/event/easetype.js", "JavaScript", 0, 0, 56, 0, 0, 3, 1, 60
+"/home/helium/coding/simpled/event/easetype.ts", "TypeScript", 0, 52, 0, 0, 0, 3, 6, 61
+"/home/helium/coding/simpled/event/event.js", "JavaScript", 0, 0, 48, 0, 0, 0, 1, 49
+"/home/helium/coding/simpled/event/event.ts", "TypeScript", 0, 44, 0, 0, 0, 0, 5, 49
+"/home/helium/coding/simpled/index-browser.js", "JavaScript", 0, 0, 383, 0, 0, 4, 8, 395
+"/home/helium/coding/simpled/index.html", "HTML", 0, 0, 0, 0, 13, 0, 3, 16
+"/home/helium/coding/simpled/index.js", "JavaScript", 0, 0, 30, 0, 0, 0, 1, 31
+"/home/helium/coding/simpled/index.ts", "TypeScript", 0, 27, 0, 0, 0, 0, 5, 32
+"/home/helium/coding/simpled/package-lock.json", "JSON", 975, 0, 0, 0, 0, 0, 1, 976
+"/home/helium/coding/simpled/package.json", "JSON", 9, 0, 0, 0, 0, 0, 1, 10
+"/home/helium/coding/simpled/parser/parser.js", "JavaScript", 0, 0, 39, 0, 0, 0, 1, 40
+"/home/helium/coding/simpled/parser/parser.ts", "TypeScript", 0, 56, 0, 0, 0, 0, 10, 66
+"/home/helium/coding/simpled/test_chart.js", "JavaScript", 0, 0, 113, 0, 0, 0, 1, 114
+"/home/helium/coding/simpled/test_chart.ts", "TypeScript", 0, 110, 0, 0, 0, 0, 0, 110
+"/home/helium/coding/simpled/tsconfig.json", "JSON with Comments", 0, 0, 0, 0, 0, 0, 1, 1
+"/home/helium/coding/simpled/type/chart.js", "JavaScript", 0, 0, 58, 0, 0, 0, 1, 59
+"/home/helium/coding/simpled/type/chart.ts", "TypeScript", 0, 63, 0, 0, 0, 0, 5, 68
+"/home/helium/coding/simpled/type/explicit_type.js", "JavaScript", 0, 0, 2, 0, 0, 0, 1, 3
+"/home/helium/coding/simpled/type/explicit_type.ts", "TypeScript", 0, 2, 0, 0, 0, 0, 1, 3
+"Total", "-", 984, 386, 760, 0, 13, 12, 59, 2214

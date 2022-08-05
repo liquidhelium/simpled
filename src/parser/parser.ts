@@ -1,5 +1,4 @@
 
-import { EaseType } from '../event/easetype';
 import { Event } from '../event/event';
 import { Judgement, JudgementType, SimChart, SimConnection, SimDot } from '../type/chart';
 export function parse_JSON_chart(str: String):SimChart{
