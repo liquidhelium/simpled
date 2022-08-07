@@ -1,7 +1,6 @@
 #draw_area {
-    width: 700px;
+    width: 100%;
     aspect-ratio: 16/9;
-    padding: 50;
     border: 3px solid black;
 }
 
@@ -17,9 +16,6 @@
     left: -50%;
 }
 
-html {
-    width: auto;
-}
 
 .verctical {
     display: flex;
@@ -29,4 +25,8 @@ html {
 .horizonal {
     display: flex;
     flex-direction: row;
+}
+
+.max{
+    width: 100%;
 }
