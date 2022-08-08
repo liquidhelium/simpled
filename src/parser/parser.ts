@@ -4,9 +4,9 @@ import { Judgement, JudgementType, SimChart, SimConnection, SimDot } from '../ty
 export function parse_JSON_chart(str: String):SimChart{
     try {
         var chart=JSON.parse(str as string);
-    }catch {
+    }catch (e){
         console.error("unable to load chart");
-        throw Error;
+        throw e;
     }
     return make_simchart(chart)
 }

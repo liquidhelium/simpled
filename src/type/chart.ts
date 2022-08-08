@@ -1,20 +1,21 @@
 import { Float, Int32 } from "./explicit_type";
 import { Event } from "../event/event";
 
-export {Judgement,JudgementType,SimChart,SimConnection,SimDot}
+export { Judgement, JudgementType, SimChart, SimConnection, SimDot }
 enum JudgementType {
     Invalid,
-    Hit,
+    Tap,
 }
 
 class Judgement {
     time: Float; // second
-    judge_type:JudgementType;
+    judge_type: JudgementType;
+    judged: boolean = false;
     constructor(
         time: Float = 0.0, // second
-        judge_type:JudgementType = JudgementType.Invalid
+        judge_type: JudgementType = JudgementType.Invalid
     ) {
-        this.time=time;
+        this.time = time;
         this.judge_type = judge_type;
     }
 }
@@ -28,7 +29,7 @@ class SimConnection {
         to: Int32 = -1,
         alpha: Array<Event> = [new Event()]
     ) {
-        this.from=from;
+        this.from = from;
         this.to = to;
         this.alpha = alpha;
     }
@@ -39,16 +40,18 @@ class SimDot {
     x_position: Array<Event>;
     y_position: Array<Event>;
     judgements: Array<Judgement>;
+    cached_x: Float=0;
+    cached_y: Float=0;
     constructor(
-        id: Int32=0,
+        id: Int32 = 0,
         x_position: Array<Event> = [new Event()],
         y_position: Array<Event> = [new Event()],
         judgements: Array<Judgement> = [new Judgement()],
     ) {
-        this.id=id;
-        this.x_position=x_position;
-        this.y_position=y_position;
-        this.judgements=judgements;
+        this.id = id;
+        this.x_position = x_position;
+        this.y_position = y_position;
+        this.judgements = judgements;
     }
 }
 

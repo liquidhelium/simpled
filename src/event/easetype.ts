@@ -27,7 +27,7 @@ function ease(time1: Float, time2: Float,y1: Float,y2: Float, time: Float, func:
 
 const tween: ((pos: number) => number)[] = [
     (pos: number) => pos,
-    (_pos: number) => 0,
+    (_pos: number) => 1,
     (pos: number) => Math.sin((pos * Math.PI) / 2), 
     (pos: number) => 1 - Math.cos((pos * Math.PI) / 2),
     (pos: number) => 1 - (pos - 1) ** 2,
