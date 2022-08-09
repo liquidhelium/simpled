@@ -24,17 +24,20 @@ class SimConnection {
     from: Int32; //点, 数组下标
     to: Int32;
     alpha: Array<Event>;
+    color: [number, number, number];
     line: MovingBezier;
     constructor(
         from: Int32 = -1,
         to: Int32 = -1,
         alpha: Array<Event> = [new Event()],
-        line: MovingBezier = new MovingBezier()
+        line: MovingBezier = new MovingBezier(),
+        color: [number, number, number] = [0, 0, 0]
     ) {
         this.from = from;
         this.to = to;
         this.alpha = alpha;
         this.line = line;
+        this.color = color;
     }
 }
 export class MovingBezier {
@@ -44,8 +47,8 @@ export class MovingBezier {
         x: Event[] = [new Event()],
         y: Event[] = [new Event()],
     ) {
-        this.x=x;
-        this.y=y;
+        this.x = x;
+        this.y = y;
     }
 }
 class SimDot {
@@ -53,8 +56,8 @@ class SimDot {
     x_position: Array<Event>;
     y_position: Array<Event>;
     judgements: Array<Judgement>;
-    cached_x: Float=0;
-    cached_y: Float=0;
+    cached_x: Float = 0;
+    cached_y: Float = 0;
     constructor(
         id: Int32 = 0,
         x_position: Array<Event> = [new Event()],

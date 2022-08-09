@@ -23,7 +23,7 @@ export function draw_chart(
         y1 *=canvas.height;
         y2 *=canvas.height;
         var alpha = event_array_get_at(line.alpha,time);
-        ctx.strokeStyle = "rgba(10,10,10," +(alpha/255).toString()+ ")"
+        ctx.strokeStyle = "rgba("+line.color[0]+","+line.color[1]+","+line.color[2]+"," +(alpha/255).toString()+ ")"
         ctx.beginPath();
         ctx.moveTo(x1,y1);
         ctx.lineTo(x2,y2);
