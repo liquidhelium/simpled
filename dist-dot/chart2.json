@@ -1,117 +1,4 @@
 {
-    "description": "改进后的谱面 - fix",
-    "connections": [{
-            "from": 0,
-            "to": 1,
-            "alpha": [{
-                    "start_time": -10000,
-                    "end_time": 0,
-                    "start_value": 255,
-                    "end_value": 255,
-                    "ease_type": 1
-                },
-                {
-                    "start_time": 0,
-                    "end_time": 5,
-                    "start_value": 255,
-                    "end_value": 255,
-                    "ease_type": 1
-                },
-                {
-                    "start_time": 5,
-                    "end_time": 6,
-                    "start_value": 255,
-                    "end_value": 0,
-                    "ease_type": 5
-                },
-                {
-                    "start_time": 6,
-                    "end_time": 10000,
-                    "start_value": 255,
-                    "end_value": 0,
-                    "ease_type": 1
-                }
-            ],
-            "line": {
-                "x": [],
-                "y": []
-            }
-        },
-        {
-            "from": 1,
-            "to": 2,
-            "alpha": [{
-                    "start_time": -10000,
-                    "end_time": 0,
-                    "start_value": 255,
-                    "end_value": 255,
-                    "ease_type": 1
-                },
-                {
-                    "start_time": 0,
-                    "end_time": 5,
-                    "start_value": 255,
-                    "end_value": 255,
-                    "ease_type": 1
-                },
-                {
-                    "start_time": 5,
-                    "end_time": 6,
-                    "start_value": 255,
-                    "end_value": 0,
-                    "ease_type": 5
-                },
-                {
-                    "start_time": 6,
-                    "end_time": 10000,
-                    "start_value": 255,
-                    "end_value": 0,
-                    "ease_type": 1
-                }
-            ],
-            "line": {
-                "x": [],
-                "y": []
-            }
-        },
-        {
-            "from": 3,
-            "to": 4,
-            "alpha": [{
-                    "start_time": -10000,
-                    "end_time": 0,
-                    "start_value": 255,
-                    "end_value": 255,
-                    "ease_type": 1
-                },
-                {
-                    "start_time": 0,
-                    "end_time": 5,
-                    "start_value": 255,
-                    "end_value": 255,
-                    "ease_type": 1
-                },
-                {
-                    "start_time": 5,
-                    "end_time": 6,
-                    "start_value": 255,
-                    "end_value": 0,
-                    "ease_type": 5
-                },
-                {
-                    "start_time": 6,
-                    "end_time": 10000,
-                    "start_value": 255,
-                    "end_value": 0,
-                    "ease_type": 1
-                }
-            ],
-            "line": {
-                "x": [],
-                "y": []
-            }
-        }
-    ],
     "dots": [{
             "id": 0,
             "x_position": [{
@@ -165,9 +52,7 @@
                     "ease_type": 1
                 }
             ],
-            "judgements": [],
-            "cached_x": 0,
-            "cached_y": 0
+            "judgements": []
         },
         {
             "id": 1,
@@ -202,11 +87,8 @@
             ],
             "judgements": [{
                 "time": 5.6,
-                "judge_type": 1,
-                "judged": false
-            }],
-            "cached_x": 0.5,
-            "cached_y": 0
+                "judge_type": 1
+            }]
         },
         {
             "id": 2,
@@ -261,9 +143,7 @@
                     "ease_type": 1
                 }
             ],
-            "judgements": [],
-            "cached_x": 1,
-            "cached_y": 0
+            "judgements": []
         },
         {
             "id": 3,
@@ -281,9 +161,7 @@
                 "end_value": 0.1,
                 "ease_type": 1
             }],
-            "judgements": [],
-            "cached_x": 0.5,
-            "cached_y": 0.1
+            "judgements": []
         },
         {
             "id": 4,
@@ -301,9 +179,108 @@
                 "end_value": 0.3,
                 "ease_type": 1
             }],
-            "judgements": [],
-            "cached_x": 0.5,
-            "cached_y": 0.3
+            "judgements": []
         }
-    ]
+    ],
+    "connections": [{
+            "from": 0,
+            "to": 1,
+            "alpha": [{
+                    "start_time": -10000,
+                    "end_time": 0,
+                    "start_value": 255,
+                    "end_value": 255,
+                    "ease_type": 1
+                },
+                {
+                    "start_time": 0,
+                    "end_time": 5,
+                    "start_value": 255,
+                    "end_value": 255,
+                    "ease_type": 1
+                },
+                {
+                    "start_time": 5,
+                    "end_time": 6,
+                    "start_value": 255,
+                    "end_value": 0,
+                    "ease_type": 5
+                },
+                {
+                    "start_time": 6,
+                    "end_time": 10000,
+                    "start_value": 255,
+                    "end_value": 0,
+                    "ease_type": 1
+                }
+            ]
+        },
+        {
+            "from": 1,
+            "to": 2,
+            "alpha": [{
+                    "start_time": -10000,
+                    "end_time": 0,
+                    "start_value": 255,
+                    "end_value": 255,
+                    "ease_type": 1
+                },
+                {
+                    "start_time": 0,
+                    "end_time": 5,
+                    "start_value": 255,
+                    "end_value": 255,
+                    "ease_type": 1
+                },
+                {
+                    "start_time": 5,
+                    "end_time": 6,
+                    "start_value": 255,
+                    "end_value": 0,
+                    "ease_type": 5
+                },
+                {
+                    "start_time": 6,
+                    "end_time": 10000,
+                    "start_value": 255,
+                    "end_value": 0,
+                    "ease_type": 1
+                }
+            ]
+        },
+        {
+            "from": 3,
+            "to": 4,
+            "alpha": [{
+                    "start_time": -10000,
+                    "end_time": 0,
+                    "start_value": 255,
+                    "end_value": 255,
+                    "ease_type": 1
+                },
+                {
+                    "start_time": 0,
+                    "end_time": 5,
+                    "start_value": 255,
+                    "end_value": 255,
+                    "ease_type": 1
+                },
+                {
+                    "start_time": 5,
+                    "end_time": 6,
+                    "start_value": 255,
+                    "end_value": 0,
+                    "ease_type": 5
+                },
+                {
+                    "start_time": 6,
+                    "end_time": 10000,
+                    "start_value": 255,
+                    "end_value": 0,
+                    "ease_type": 1
+                }
+            ]
+        }
+    ],
+    "description": "改进后的谱面 - fix"
 }

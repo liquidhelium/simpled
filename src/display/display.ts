@@ -11,7 +11,7 @@ export function draw_chart(
     var ctx: CanvasRenderingContext2D=canvas.getContext("2d")
     // ctx.scale(devicePixelRatio,devicePixelRatio)
     ctx.lineWidth = 5;
-    ctx.lineCap = "round";
+    ctx.lineCap = "butt";
     for (let line of chart.connections) {
         var x1,x2,y1,y2;
         chart.dots[line.from].cached_x = x1 = event_array_get_at(chart.dots[line.from].x_position, time)

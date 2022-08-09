@@ -12,17 +12,22 @@ const judge_times = {
 }
 
 //see the discription in "is_nearby"
-// const judge_radius = 0.07;
+const judge_radius = 0.07;
 
-export function judge(chart: SimChart) {
+export function judge(chart: SimChart) { 
     for (const dot of chart.dots) {
         for (const click of touch_list.values()) {
+            var judgelist: Judgement[] = [];
             if (is_nearby(dot,click)) {
                 for (const judgeiter of dot.judgements) {
                     if (!judgeiter.judged) {
-                    console.log(judge_single(judgeiter,click));
+                        judgelist.push(judgeiter)
                     }
                 }
+            }
+            judgelist.sort((a,b) => a.time - b.time)
+            for (const j of judgelist) {
+                judge_single(j,click);
             }
         }
     }
@@ -40,11 +45,11 @@ function judge_single(judgement: Judgement, click: Click): JudgeResult {
     show_judge_result(result);
     return result;
 }
-function is_nearby(_dot: SimDot, _click: Click): boolean {
-    // // I think it may cause performance issues, let's wait and see
-    // var euclid_distance = Math.sqrt((dot.cached_x - click.x) ** 2 + (dot.cached_y - click.y) ** 2);
-    // return euclid_distance < judge_radius
-    return true; //they want to use full screen judge
+function is_nearby(dot: SimDot, click: Click): boolean {
+    // I think it may cause performance issues, let's wait and see
+    var euclid_distance = Math.sqrt((dot.cached_x - click.x) ** 2 + (dot.cached_y - click.y) ** 2);
+    return euclid_distance < judge_radius
+    // return true; //they want to use full screen judge
 }
 
 function judge_tap(judgement: Judgement, click: Click): JudgeResult {

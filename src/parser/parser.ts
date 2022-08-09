@@ -1,6 +1,6 @@
 
 import { Event } from '../event/event';
-import { Judgement, JudgementType, SimChart, SimConnection, SimDot } from '../type/chart';
+import { Judgement, JudgementType, MovingBezier, SimChart, SimConnection, SimDot } from '../type/chart';
 export function parse_JSON_chart(str: String):SimChart{
     try {
         var chart=JSON.parse(str as string);
@@ -41,7 +41,15 @@ function make_simconnection(value: any): SimConnection {
     return new SimConnection(
         value.from,
         value.to,
-        make_array(value.alpha,make_event)
+        make_array(value.alpha,make_event),
+        make_bezier(value.line)
+    )
+}
+
+function make_bezier(value: any): MovingBezier {
+    return new MovingBezier(
+        make_array(value.x, make_event),
+        make_array(value.y, make_event)
     )
 }
 

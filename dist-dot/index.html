@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta charset="utf-8">
+    <title>The Simple</title>
+    
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+        eruda.init();
+    </script>
+  <script type="module" crossorigin src="/assets/index.3d3427c9.js"></script>
+  <link rel="stylesheet" href="/assets/index.e96671df.css">
+</head>
+
+<body>
+    <dev class="verctical">
+        <dev class="center">
+            <dev class="container verctical">
+                <canvas id="draw_area">
+                  你的浏览器不支持Canvas.
+                </canvas>
+                <dev class="center">
+                    <dev class="container horizonal">
+                        <button type="button" id="pause">暂停</button>
+                    </dev>
+                </dev>
+                <dev class="horizonal">
+                    <input type="button" value="点击全屏" id="full_screen">
+                    <input type="file" value="上传谱面" id="upload_file">
+                </dev>
+                <dev class="center">
+                    <dev class="container verctical">
+                        <p>最近一次判定结果: <strong id="judge_result">未判定</strong>
+                            <br/>偏移: <strong id="judge_adjust">无</strong></p>
+                    </dev>
+                </dev>
+            </dev>
+        </dev>
+    </dev>
+</body>
+
+</html>

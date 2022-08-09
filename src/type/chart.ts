@@ -9,8 +9,8 @@ enum JudgementType {
 
 class Judgement {
     time: Float; // second
-    judge_type: JudgementType;
-    judged: boolean = false;
+    judge_type: JudgementType; // 判定类型
+    judged: boolean = false; // 已经判完了?
     constructor(
         time: Float = 0.0, // second
         judge_type: JudgementType = JudgementType.Invalid
@@ -21,20 +21,33 @@ class Judgement {
 }
 
 class SimConnection {
-    from: Int32;
+    from: Int32; //点, 数组下标
     to: Int32;
     alpha: Array<Event>;
+    line: MovingBezier;
     constructor(
         from: Int32 = -1,
         to: Int32 = -1,
-        alpha: Array<Event> = [new Event()]
+        alpha: Array<Event> = [new Event()],
+        line: MovingBezier = new MovingBezier()
     ) {
         this.from = from;
         this.to = to;
         this.alpha = alpha;
+        this.line = line;
     }
 }
-
+export class MovingBezier {
+    x: Array<Event>;
+    y: Array<Event>;
+    constructor(
+        x: Event[] = [new Event()],
+        y: Event[] = [new Event()],
+    ) {
+        this.x=x;
+        this.y=y;
+    }
+}
 class SimDot {
     id: Int32;
     x_position: Array<Event>;

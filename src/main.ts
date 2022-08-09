@@ -11,6 +11,7 @@ var mql = window.matchMedia("(orientation: portrait)")
 
 declare global {
   var chart_start: number;
+  var current_chart: SimChart;
 }
 window.onload = () => {
   let file_url =
@@ -24,6 +25,7 @@ window.onload = () => {
           fr.onload=(_ev) =>{
             var f= fr.result as string;
             var chart = parse_JSON_chart(f);
+            globalThis.current_chart = chart;
             var canvas: HTMLCanvasElement = document.getElementById("draw_area") as HTMLCanvasElement;
             canvas_update_ratio(canvas);
             connect_all();
