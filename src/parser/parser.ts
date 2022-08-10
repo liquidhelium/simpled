@@ -67,7 +67,9 @@ function make_group(value:any):Group {
         value.description,
         make_array(value.dots, make_simdot),
         make_array(value.connections,make_simconnection),
-        
+        make_array(value.x,make_event),
+        make_array(value.y,make_event),
+        make_array(value.angle,make_event)
     )
 }
 

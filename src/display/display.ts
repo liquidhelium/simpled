@@ -25,7 +25,6 @@ export function draw_group(
         group.dots[line.from].cached_y = p1[1] / h;
         group.dots[line.to].cached_x = p2[0] / w;
         group.dots[line.to].cached_y = p2[1] / h;
-        console.log(p1[0]/w,p1[1]/h)
         var alpha = event_array_get_at(line.alpha,time);
         ctx.strokeStyle = "rgba("+line.color[0]+","+line.color[1]+","+line.color[2]+"," +(alpha/255).toString()+ ")"
         ctx.beginPath();
@@ -41,9 +40,10 @@ export function draw_chart(chart: SimChart, canvas: HTMLCanvasElement,time:Float
     for (const group of chart.groups) {
         const x = event_array_get_at(group.x,time);
         const y = event_array_get_at(group.y, time);
+        console.log(x,y);
         const radians = event_array_get_at(group.angle,time) / 180 * Math.PI;
         ctx.save();
-        ctx.translate(x,y);
+        ctx.translate(x*canvas.width,y*canvas.height);
         ctx.rotate(radians);
         draw_group(group,ctx,time,canvas.width,canvas.height);
         ctx.restore();

@@ -18,8 +18,8 @@
         "angle": [{
             "start_time": -10000,
             "end_time": 10000,
-            "start_value": 0,
-            "end_value": 0,
+            "start_value": 10,
+            "end_value": 10,
             "ease_type": 1
         }],
         "description": "改进后的谱面 - fix",
