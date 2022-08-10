@@ -1,7 +1,8 @@
 import { Float, Int32 } from "./explicit_type";
 import { Event } from "../event/event";
+import { EaseType } from "../event/easetype";
 
-export { Judgement, JudgementType, SimChart, SimConnection, SimDot }
+export { Judgement, JudgementType, Group, SimConnection, SimDot, SimChart}
 enum JudgementType {
     Invalid,
     Tap,
@@ -71,17 +72,39 @@ class SimDot {
     }
 }
 
-class SimChart {
+class Group {
     description: String;
     connections: SimConnection[];
     dots: SimDot[];
+    x: Event[];
+    y: Event[];
+    angle: Event[];
     constructor(
+        description: String,
         dots: Array<SimDot> = [new SimDot()],
         connections: Array<SimConnection> = [new SimConnection()],
-        description: String
+        
+        x: Event[] = [new Event(-10000,10000,0,0,EaseType.Const)],
+        y: Event[] = [new Event(-10000,10000,0,0,EaseType.Const)],
+        angle: Event[] = [new Event(-10000,10000,0,0,EaseType.Const)],
     ) {
         this.dots = dots;
         this.connections = connections;
-        this.description = description
+        this.description = description;
+        this.x=x;
+        this.y=y;
+        this.angle=angle;
+    }
+}
+
+class SimChart {
+    description: String;
+    groups: Group[];
+    constructor(
+        description: String = "Untitled chart",
+        groups: Group[] = [new Group(description = "Unnamed Group")]
+    ) {
+        this.description=description;
+        this.groups=groups;
     }
 }

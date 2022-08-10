@@ -58,11 +58,18 @@ function canvas_update_ratio(canvas: HTMLCanvasElement) {
 }
 
 function start_playing(chart: SimChart, canvas: HTMLCanvasElement, seek: number = 0) {
+  const ret = canvas.getContext("2d")
+  if (!ret) {throw Error("no context")}
+  var ctx = ret;
   var f = (_time :number) => {
     var time = new Date().getTime()
     var in_chart_time=(time-seek) * .001;
+    ctx.save();
+    ctx.translate(0,canvas.height);
+    ctx.scale(1,-1); // 左下角坐标系
     clearCanvas(canvas);
-    draw_chart(chart, canvas, in_chart_time);
+    draw_chart(chart,canvas,in_chart_time);
+    ctx.restore();
     draw_touch_circle(touch_list,canvas);
     judge(chart);
     animation_id = requestAnimationFrame(f)

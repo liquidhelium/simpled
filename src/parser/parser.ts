@@ -1,7 +1,7 @@
 
 import { Event } from '../event/event';
-import { Judgement, JudgementType, MovingBezier, SimChart, SimConnection, SimDot } from '../type/chart';
-export function parse_JSON_chart(str: String):SimChart{
+import { Judgement, JudgementType, MovingBezier, Group, SimConnection, SimDot, SimChart } from '../type/chart';
+export function parse_JSON_chart(str: String): SimChart{
     try {
         var chart=JSON.parse(str as string);
     }catch (e){
@@ -62,11 +62,18 @@ function make_simdot(value: any): SimDot {
     )
 }
 
-function make_simchart(value:any):SimChart {
-    return new SimChart(
+function make_group(value:any):Group {
+    return new Group(
+        value.description,
         make_array(value.dots, make_simdot),
         make_array(value.connections,make_simconnection),
-        value.description
+        
     )
 }
 
+function make_simchart(value: any): SimChart {
+    return new SimChart(
+        value.description,
+        make_array(value.groups,make_group)
+    )
+}
